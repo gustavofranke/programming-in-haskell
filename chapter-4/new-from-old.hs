@@ -8,4 +8,4 @@ mySplitAt :: Int -> [a] -> ([a], [a])
 mySplitAt n xs = (take n xs, drop n xs)
 
 recip :: Fractional a => a -> a
-recip n = 1/n
+recip n = 1 / n

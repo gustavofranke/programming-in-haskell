@@ -3,7 +3,7 @@ myAbs n = if n >= 0 then n else -n
 
 mySignum :: Int -> Int
 mySignum n = if n < 0 then -1 else
-              if n == 0 then 0 else 1
+             if n == 0 then 0 else 1
 
 -- Guarded Equations
 myAbsGuarded :: Int -> Int
