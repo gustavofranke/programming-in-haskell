@@ -14,6 +14,10 @@ halve xs = (take h xs, drop h xs)
 -- (c) pattern matching.
 -- Hint: make use of the library function null.
 
+safetailPM :: [a] -> [a]
+safetailPM [] = []
+safetailPM (_:xs) = xs
+
 -- 3. In a similar way to ∧, show how the logical disjunction operator ∨ can
 -- be defined in four different ways using pattern matching.
 
@@ -30,4 +34,4 @@ halve xs = (take h xs, drop h xs)
 -- 6. Show how the curried function definition mult x y z = x ∗ y ∗ z can be
 -- understood in terms of lambda expressions.
 mult :: Int -> (Int -> (Int -> Int))
-mult x y z = x * y * z
+mult = \x -> (\y -> (\z -> x * y * z))
