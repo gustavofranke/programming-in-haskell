@@ -14,6 +14,13 @@ halve xs = (take h xs, drop h xs)
 -- (c) pattern matching.
 -- Hint: make use of the library function null.
 
+safetailC :: [a] -> [a]
+safetailC xs = if null xs then [] else tail xs
+
+safetailGE :: [a] -> [a]
+safetailGE xs | null xs = []
+              | otherwise = tail xs
+
 safetailPM :: [a] -> [a]
 safetailPM [] = []
 safetailPM (_:xs) = xs
